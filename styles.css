@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Pink: rgba(255, 21, 21, .575);
+    --Blue: rgba(94, 85, 164, 1);
+    --BlueLight: rgb(115, 109, 162);
+    --Green: rgba(55, 204, 138, 1);
+    --GreenLight: rgba(55, 204, 138, .5);
+    
+    --GreenDark: rgb(36, 139, 93);
+    --GreenDarkLight: rgba(36, 139, 93,.5);
+
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --SuperLightGrey: hsla(217, 12%, 63%,.5);
+    --DarkBlue: hsla(213, 19%, 18%, .2);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+
+    font-family: "Overpass", sans-serif;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+button {
+    border: none;
+}
+
+body {
+    min-height: 100svh;
+    background-color: var(--Pink);
+    background-image: url(./images/bg-intro-desktop.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box01 {
+    padding: 1rem;
+}
+
+.box01-head {
+    max-width: 25rem;
+    color: var(--White);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.box01-p {
+    max-width: 34rem;
+    color: var(--White);
+    font-weight: 400;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+
+}
+
+.box02 {
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+.btn-try {
+    background-color: var(--Blue);
+    color: var(--White);
+    font-weight: 400;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 0 0 var(--DarkBlue);
+    cursor: pointer;
+}
+.btn-try:hover {
+    background-color: var(--BlueLight);
+}
+
+.box02-form {
+   
+    display: flex;
+    flex-direction: column;
+    
+    background-color: var(--White);
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-inline: 2rem;
+    box-shadow: 0 10px 0 0 var(--DarkBlue);
+}
+
+.input-border {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+    padding-block: .5rem;
+    padding-inline: 1.5rem;
+    border: 1px solid var(--SuperLightGrey);
+    border-radius: 5px;
+
+}
+.input-border:focus {
+  
+    border: 1px solid black;
+}
+
+
+
+.input-form {
+    width: 80%;
+    
+    /* padding-block: .8rem;
+    padding-inline: 1.5rem; */
+
+    border: none;
+    border-radius: 5px;
+    font-size: .8rem;
+    letter-spacing: .8px;
+    color: var(--VeryDarkBlue);
+}
+.input-form:focus {
+    border: none;
+    outline: none;
+}
+.input-border:has(.input-form:focus) {
+    border: 1px solid var(--VeryDarkBlue);
+}
+
+.error {
+    visibility: hidden;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+.error-text {
+    visibility: hidden;
+    margin-top: .2rem;
+    font-size: .5rem;
+    color: var(--Pink);
+    text-align: end;
+}
+
+.btn-claim {
+    margin-top: 1.2rem;
+    background-color: var(--Green);
+    color: var(--White);
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: .8rem;
+    box-shadow: 0 3px 0 0 var(--GreenDark);
+    cursor: pointer;
+}
+
+.btn-claim:hover {
+    background-color: var(--GreenLight);
+    box-shadow: 0 3px 0 0 var(--GreenDarkLight);
+}
+
+.box02-warning {
+    margin-top: .5rem;
+    color: var(--LightGrey);
+    font-size: .5rem;
+    text-align: center;
+}
+
+.red {
+    color: var(--Pink);
+    font-weight: 700;
+}
+
+footer {
+    position: relative;
+    bottom: -10rem;
+    color: var(--White);
+    font-size: .8rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--White);
+}
+
+@media (max-width: 375px) {
+    .box01 {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box01-head {
+        font-size: 2rem;
+  
+    }
+
+
+    .box02 {
+        margin-top: 2.5rem;
+        width: 100%;
+    }
+
+    .btn-try {
+        padding-inline: 6rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .box02-form {
+        margin-top: 1rem;
+    }
+
+    .input-form {
+        padding-block: 1rem;
+        font-size: 1rem;
+    }
+
+    .btn-claim {
+        padding-block: 1.2rem;
+        font-size: 1rem;
+       
+    }
+
+    .box02-warning {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        position: relative;
+        bottom: -2rem;
+
+    }
+}
